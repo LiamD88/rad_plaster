@@ -136,14 +136,6 @@ section {
     border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-    .hero-section {
-        background:
-            linear-gradient(rgba(17,26,43,0.6), rgba(17,26,43,0.75)),
-            url('../images/hero-image.jpg') center/cover no-repeat;
-    }
-}
-
 @media (min-width: 576px) {
     .btn-accent {
         padding: 12px 28px;

@@ -28,8 +28,8 @@
             <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
                 <ul class="navbar-nav gap-lg-4 gap-3 mt-3 mt-lg-0 align-items-lg-center">
                     <li class="nav-item"><a class="nav-link text-light" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#">Enquiries</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="tel:07344543393">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#enquiries">Enquiries</a></li>
                 </ul>
             </div>
         </div>
@@ -39,7 +39,7 @@
         <div class="container px-3 px-sm-4 text-center" data-aos="fade-up">
             <h1 class="hero-title mb-2 mb-md-3">Expert Craftsmanship. Superior Finish</h1>
             <p class="hero-subtitle mb-0 px-sm-2">High-end bespoke plastering solutions</p>
-            <a href="#" class="btn btn-accent mt-3 mt-md-4">Get A Quote</a>
+            <a href="tel:07344543393" class="btn btn-accent mt-3 mt-md-4">Get A Quote</a>
         </div>
     </section>
 
@@ -89,12 +89,41 @@
             <div class="row align-items-center g-4">
 
                 <div class="col-12 col-md-6 order-2 order-md-1" data-aos="fade-right">
-                    <div class="ratio ratio-4x3 map-frame">
-                        <iframe 
-                            src="https://www.google.com/maps?q=Citywest,Dublin&output=embed"
-                            allowfullscreen 
-                            loading="lazy">
-                        </iframe>
+                    <div class="card premium-card border-0 p-0 overflow-hidden map-frame">
+                        <div class="ratio ratio-4x3">
+                            <div id="workGalleryCarousel" class="carousel slide work-gallery-carousel h-100">
+                                <div class="carousel-indicators work-gallery-thumbs">
+                                    <button type="button" data-bs-target="#workGalleryCarousel" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Show plaster work 1">
+                                        <img src="assets/images/plaster1.jpg" alt="">
+                                    </button>
+                                    <button type="button" data-bs-target="#workGalleryCarousel" data-bs-slide-to="1"
+                                        aria-label="Show plaster work 2">
+                                        <img src="assets/images/plaster2.jpg" alt="">
+                                    </button>
+                                </div>
+                                <div class="carousel-inner h-100">
+                                    <div class="carousel-item active h-100">
+                                        <img src="assets/images/plaster1.jpg" class="d-block w-100 h-100"
+                                            style="object-fit: cover;" alt="Plaster work example 1">
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <img src="assets/images/plaster2.jpg" class="d-block w-100 h-100"
+                                            style="object-fit: cover;" alt="Plaster work example 2">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#workGalleryCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#workGalleryCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -104,7 +133,7 @@
                         <p class="mb-1"><strong>Phone:</strong></p>
                         <p class="fs-4 mb-3"><a href="tel:07344543393" class="text-reset text-decoration-none">07344543393</a></p>
                         <p class="mb-1"><strong>Email:</strong></p>
-                        <p class="fs-4 mb-0"><a href="mailto:woodco@woodco.com" class="text-reset text-decoration-none">woodco@woodco.com</a></p>
+                        <p class="fs-4 mb-0"><a href="mailto:woodco@woodco.com" class="text-reset text-decoration-none">radplasteringsolutions@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -112,7 +141,7 @@
         </div>
     </section>
 
-    <section class="section-mid">
+    <section class="section-mid" id="enquiries">
         <div class="container px-3 px-sm-4">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-6" data-aos="fade-up">

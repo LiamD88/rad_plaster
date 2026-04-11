@@ -165,66 +165,216 @@ section {
     color: white;
 }
 
-/* MAP / GALLERY */
-.map-frame {
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    min-height: 220px;
+.text-accent {
+    color: var(--accent) !important;
 }
 
-@media (min-width: 768px) {
-    .map-frame {
-        min-height: 0;
-    }
+.letter-spacing-wide {
+    letter-spacing: 0.12em;
 }
 
-/* Bootstrap carousel: clickable thumbnail indicators + controls over image only */
-.work-gallery-carousel .carousel-indicators.work-gallery-thumbs {
+/* PORTFOLIO — latch + collapse */
+.portfolio-latch {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.portfolio-collapse-inner {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.portfolio-folder-nav .nav-link {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-folder-nav .nav-link:hover {
+    color: var(--text-main);
+    border-color: rgba(201, 162, 77, 0.35);
+}
+
+.portfolio-folder-nav .nav-link.active {
+    background-color: var(--accent);
+    color: #111;
+    border-color: var(--accent);
+    font-weight: 600;
+}
+
+.portfolio-ba-card .portfolio-ba-head {
+    background: linear-gradient(180deg, rgba(29, 41, 66, 0.98), rgba(24, 35, 58, 0.92));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.portfolio-expand {
+    color: var(--accent) !important;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.ba-compare {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    touch-action: none;
+    user-select: none;
+    cursor: ew-resize;
+    background: #0a0f18;
+}
+
+.ba-compare .ba-layer {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    top: 0;
     left: 0;
-    z-index: 2;
-    margin: 0;
-    padding: 0.5rem 0.75rem 0.75rem;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.work-gallery-carousel .work-gallery-thumbs [data-bs-slide-to] {
-    width: 4.5rem;
-    height: 3.25rem;
-    margin: 0;
-    padding: 0;
-    text-indent: 0;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    opacity: 1;
-    background: transparent;
-    overflow: hidden;
-}
-
-.work-gallery-carousel .work-gallery-thumbs [data-bs-slide-to] img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    pointer-events: none;
 }
 
-.work-gallery-carousel .work-gallery-thumbs [data-bs-slide-to].active {
-    border-color: var(--accent);
+.ba-compare .ba-after {
+    z-index: 1;
 }
 
-.work-gallery-carousel .carousel-inner {
-    border-radius: 0;
-}
-
-.work-gallery-carousel .carousel-control-prev,
-.work-gallery-carousel .carousel-control-next {
-    z-index: 3;
+.ba-compare .ba-clip {
+    position: absolute;
     top: 0;
-    bottom: 4.75rem;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    overflow: hidden;
+    z-index: 2;
+    border-right: 2px solid var(--accent);
+    box-shadow: 8px 0 24px rgba(0, 0, 0, 0.45);
+}
+
+.ba-compare .ba-clip .ba-before {
+    max-width: none;
+    height: 100%;
+    width: 100%;
+}
+
+.ba-compare .ba-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 44px;
+    margin-left: -22px;
+    z-index: 4;
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.ba-compare .ba-handle::after {
+    content: "";
+    width: 4px;
+    height: 56px;
+    border-radius: 4px;
+    background: var(--accent);
+    box-shadow: 0 0 0 2px rgba(17, 26, 43, 0.85), 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.ba-compare .ba-handle:focus {
+    outline: none;
+}
+
+.ba-compare .ba-handle:focus-visible::after {
+    box-shadow: 0 0 0 3px rgba(201, 162, 77, 0.55), 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.ba-badge {
+    position: absolute;
+    top: 0.5rem;
+    z-index: 3;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.ba-badge-before {
+    left: 0.5rem;
+    background: rgba(17, 26, 43, 0.82);
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ba-badge-after {
+    right: 0.5rem;
+    background: var(--accent);
+    color: #111;
+}
+
+.ba-reset {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    z-index: 5;
+    opacity: 0.88;
+    pointer-events: auto;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.portfolio-reel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: var(--accent) rgba(255, 255, 255, 0.08);
+}
+
+.portfolio-reel-item {
+    flex: 0 0 auto;
+    width: min(240px, 72vw);
+    scroll-snap-align: start;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-reel-item:hover,
+.portfolio-reel-item:focus-visible {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    outline: none;
+}
+
+.portfolio-reel-frame {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-reel-label {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.portfolio-modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+}
+
+.portfolio-modal-content .modal-header {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /* Reduce motion for users who prefer it */
@@ -234,6 +384,15 @@ section {
     }
 
     .premium-card:hover {
+        transform: none;
+    }
+
+    .portfolio-reel-item {
+        transition: none;
+    }
+
+    .portfolio-reel-item:hover,
+    .portfolio-reel-item:focus-visible {
         transform: none;
     }
 }

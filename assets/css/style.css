@@ -377,6 +377,32 @@ section {
     background: rgba(0, 0, 0, 0.2);
 }
 
+/* FOOTER CREDIT */
+.site-footer-note {
+    background: linear-gradient(180deg, rgba(17, 26, 43, 0.95), rgba(10, 14, 22, 0.98));
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.8rem 0 1rem;
+}
+
+.footer-credit {
+    color: #8d98ad;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+}
+
+.footer-credit a {
+    color: #b5becf;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(181, 190, 207, 0.5);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-credit a:hover,
+.footer-credit a:focus-visible {
+    color: #d5dde9;
+    border-bottom-color: rgba(213, 221, 233, 0.95);
+}
+
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
     .premium-card {
